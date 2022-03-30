@@ -1,0 +1,14 @@
+.card__body input[name="NS1"],
+.card__body input[name="NS2"] {
+    width: 100%;
+    padding: 8px 16px;
+    border-width: 1px;
+    border-color: #ced4da;
+    border-radius: 3px;
+    outline: none;
+}
+
+.card__body input[name="NS1"]:focus,
+.card__body input[name="NS2"]:focus {
+    border-color: var(--primary-color)
+}

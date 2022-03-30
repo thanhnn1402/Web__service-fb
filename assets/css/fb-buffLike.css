@@ -1,0 +1,26 @@
+.feels {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.feel {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border: 1px solid #3577f1;
+    color: #3577f1;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.feel img {
+    width: 20px;
+    height: 20px;
+}
+
+.feel.active,
+.feel:hover {
+    background-color: #3577f1;
+    color: #fff;
+}
