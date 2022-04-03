@@ -1,26 +1,38 @@
-const items = document.querySelectorAll('.navbar__item');
+const btnNavs = document.querySelectorAll('.navbar__link');
 const subNavs = document.querySelectorAll('.navbar-sub');
 
-subNavs.forEach(function(subNav, index) {
-    const item = items[index + 4];
 
-    item.onclick = function() {
-        if (document.querySelector('.navbar__link.active')) {
-            document.querySelector('.navbar__link.active').classList.remove('active');
-            document.querySelector('.navbar-sub').style.maxHeight = null;
+// subNavs.forEach(function(subNav, index) {
+//     const btnNav = btnNavs[index + 4];
 
-            this.querySelector('.navbar__link').classList.add('active');
-            subNav.style.maxHeight = subNav.scrollHeight + 'px';
-        } else if (this.querySelector('.navbar__link.active')) {
-            this.querySelector('.navbar__link.active').classList.remove('active');
-            subNav.style.maxHeight = null;
-        } else {
-            this.querySelector('.navbar__link').classList.add('active');
-            subNav.style.maxHeight = subNav.scrollHeight + 'px';
-        }
-    }
-})
+//     btnNav.onclick = function() {
+//         let toggle = document.createAttribute('ds-toggle');
+//         var i = 0;
 
+//         if (document.querySelector('.navbar__link.acvtive')) {
+//             document.querySelector('.navbar__link.acvtive').classList.remove('active');
+//             console.log('sjhsh')
+//         } else {
+//             this.classList.toggle('active');
+//             if (subNav.style.maxHeight) {
+//                 toggle.value = false;
+//                 subNav.setAttributeNode(toggle);
+//                 subNav.style.maxHeight = null;
+//                 this.querySelector('.navbar__link-icon').classList.remove('active');
+//             } else {
+//                 toggle.value = true;
+//                 subNav.setAttributeNode(toggle);
+//                 subNav.style.maxHeight = subNav.scrollHeight + 'px';
+//                 this.querySelector('.navbar__link-icon').classList.add('active');
+//             }
+//         }
+//     }
+// })
+
+
+function showMenu() {
+
+}
 
 // show service 
 var btnTopbar = document.querySelectorAll('.topbar-right__item');

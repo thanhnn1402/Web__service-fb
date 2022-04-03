@@ -427,20 +427,20 @@
     color: #fff;
 }
 
-.navbar__link::after {
+.navbar__link span::after {
     display: block;
-    content: "\f057";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 400;
-    margin-left: auto;
-    -webkit-transition: -webkit-transform .2s;
-    transition: -webkit-transform .2s;
-    transition: transform .2s;
-    transition: transform .2s, -webkit-transform .2s;
-    font-size: 1.05rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 11px;
+    content: "\f105";
     position: absolute;
     top: 0;
     right: 18px;
+    transition: all .3s;
+}
+
+.navbar__link span.active::after {
+    transform: rotate(90deg);
 }
 
 .navbar-icon {
@@ -595,7 +595,7 @@
 
 .tabs {
     text-align: center;
-    padding: 8px 16px;
+    padding: 10px 16px;
     border-radius: 5px;
     margin: 24px 0;
     cursor: pointer;
@@ -628,7 +628,8 @@
 }
 
 .form-control__item input[type="text"],
-.form-control__item textarea {
+.form-control__item textarea,
+.form-control__item select {
     width: 100%;
     padding: 8px 16px;
     border: 1px solid #d9dde2;
@@ -636,7 +637,8 @@
 }
 
 .form-control__item input[type="text"]:focus,
-.form-control__item textarea:focus {
+.form-control__item textarea:focus,
+.form-control__item select:focus {
     outline-style: solid;
     outline-color: #5c4bba;
     outline-width: 1px;
@@ -657,13 +659,42 @@
 
 .form-sever-infor {
     border: 1px solid #d9d9d9;
+    border-radius: 4px;
 }
 
 .form-sever-infor__title {
+    margin-top: 4px;
     padding: 6px 12px;
     background-color: #45cb85;
     color: #fff;
     display: inline-block;
+    position: relative;
+}
+
+.form-sever-infor__title::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: var(--success-color) transparent transparent var(--success-color);
+    position: absolute;
+    top: 0;
+    right: -14px;
+}
+
+.form-sever-infor__title::before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--success-color) var(--success-color);
+    position: absolute;
+    bottom: 0;
+    right: -14px;
 }
 
 .form-sever-infor__content {
@@ -711,6 +742,9 @@
 
 .form-search input {
     padding: 8px 16px;
+    border-radius: 4px;
+    outline: none;
+    border-width: 1px;
 }
 
 .dataTable-bill {
