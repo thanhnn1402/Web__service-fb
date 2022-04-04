@@ -427,7 +427,7 @@
     color: #fff;
 }
 
-.navbar__link span::after {
+.navbar__link-icon::after {
     display: block;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -439,7 +439,7 @@
     transition: all .3s;
 }
 
-.navbar__link span.active::after {
+.navbar__link-icon.active::after {
     transform: rotate(90deg);
 }
 
@@ -624,7 +624,8 @@
 }
 
 .form-control__item label {
-    color: #8e9bb2;
+    color: #878a99;
+    font-weight: 400;
 }
 
 .form-control__item input[type="text"],
@@ -644,8 +645,12 @@
     outline-width: 1px;
 }
 
-.form-control__item input[name=payment] {
-    background-color: #eff2f7;
+.form-control__item input#payment {
+    background-color: #e6ecf7;
+}
+
+.form-check {
+    margin-bottom: 6px
 }
 
 .form-check__price {
@@ -702,16 +707,21 @@
 }
 
 .form-sever-infor__description {
-    font-size: 14px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 13px;
+    margin-top: 8px;
 }
 
 .form-sever-infor__description i {
-    margin-right: 6px;
+    margin-right: 8px;
     color: #45cb85;
 }
 
 .form-sever-infor__description span {
-    color: #8e9bb2;
+    color: #878a99;
+    margin-top: -4px;
+    line-height: 1.4;
 }
 
 .form-control__btn {
