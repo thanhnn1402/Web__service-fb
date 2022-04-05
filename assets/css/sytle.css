@@ -157,11 +157,10 @@
 
 .topbar-right-service__link {
     text-decoration: none;
-    display: block;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 16px 0;
     border-radius: 4px;
     transition: all 0.2s linear;
@@ -178,8 +177,8 @@
 
 .topbar-right-service___name {
     font-size: 13px;
-    line-height: 34px;
     color: #212529;
+    text-align: center;
 }
 
 .login-icon {
@@ -367,6 +366,7 @@
 .navbar {
     position: fixed;
     width: 250px;
+    overflow-x: hidden;
     top: 0;
     left: 0;
     padding-left: 0;
@@ -455,12 +455,26 @@
 }
 
 .navbar-sub__item {
-    margin: 16px 29px;
+    margin: 16px 29px 0 29px;
 }
 
 .navbar-sub__link {
     text-decoration: none;
     color: var(--text-color);
+    display: block;
+    position: relative;
+}
+
+.navbar-sub__link::after {
+    display: block;
+    content: "\f068";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -24px;
 }
 
 .navbar-sub__link:hover {
@@ -494,11 +508,31 @@
     align-items: center;
 }
 
-.breadcrumb {
-    margin-left: 16px;
+.breadcrumbs a {
+    color: #495057;
+    text-decoration: none;
 }
 
-.breadcrumb:hover {
+.breadcrumbs li:last-child {
+    margin-left: 28px;
+    color: #878a99;
+    position: relative;
+}
+
+.breadcrumbs li:last-child::after {
+    display: block;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 8px;
+    position: absolute;
+    top: 50%;
+    left: -14px;
+    transform: translateY(-50%);
+    color: #878a99;
+}
+
+.breadcrumbs a:hover {
     color: #3577f1;
 }
 

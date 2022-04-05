@@ -6,39 +6,26 @@ subNavs.forEach(function(subNav, index) {
     const btnNav = btnNavs[index + 4];
     let toggle = document.createAttribute('data-toggle');
     toggle.value = false;
-    // subNav.setAttributeNode(toggle);
-
     btnNav.onclick = function() {
-        //     if (subNav.getAttribute('data-toggle') == false) {
-        //         subNav.style.maxHeight = subNav.scrollHeight + 'px';
-        //         console.log(subNav.getAttribute('data-toggle'))
-        //         toggle.value = true;
-
-        //     } else {
-        //         subNav.style.maxHeight = null;
-        //         console.log(subNav.getAttribute('data-toggle'))
-        //         toggle.value = false;
-        //     }
-
-
-
-        if (document.querySelector('.navbar__link.active')) {
-            for (var i = 0; i < subNavs.length; i++) {
-                document.querySelector('.navbar__link.active').classList.remove('active');
+        subNav.setAttributeNode(toggle);
+        for (let i = 0; i < subNavs.length; i++) {
+            if (subNavs[i].getAttribute('data-toggle')) {
+                subNavs[i].style.maxHeight = null;
+                btnNavs[i + 4].classList.remove('active');
+                btnNavs[i + 4].querySelector('.navbar__link-icon').classList.remove('active');
             }
+        }
+
+        if (subNav.style.maxHeight) {
+            this.classList.remove('active');
+            subNav.style.maxHeight = null;
+            this.querySelector('.navbar__link-icon.active').classList.remove('active');
+            toggle.value = false;
         } else {
-            this.classList.toggle('active');
-            if (subNav.style.maxHeight) {
-                toggle.value = false;
-                subNav.setAttributeNode(toggle);
-                subNav.style.maxHeight = null;
-                this.querySelector('.navbar__link-icon').classList.remove('active');
-            } else {
-                toggle.value = true;
-                subNav.setAttributeNode(toggle);
-                subNav.style.maxHeight = subNav.scrollHeight + 'px';
-                this.querySelector('.navbar__link-icon').classList.add('active');
-            }
+            this.classList.add('active');
+            subNav.style.maxHeight = subNav.scrollHeight + 'px';
+            this.querySelector('.navbar__link-icon').classList.add('active');
+            toggle.value = true;
         }
     }
 })
