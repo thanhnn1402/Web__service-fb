@@ -7,6 +7,7 @@
     display: block;
     height: 70px;
     background-color: #fff;
+    transition: margin 0.2s ease;
     box-shadow: 0 2px 5px #f2f2f7;
 }
 
@@ -374,6 +375,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: width 0.2s ease;
 }
 
 .navbar__list {
@@ -427,7 +429,7 @@
     color: #fff;
 }
 
-.navbar__link-icon::after {
+.js-btn-subNav .navbar__item-text::after {
     display: block;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
@@ -439,7 +441,7 @@
     transition: all .3s;
 }
 
-.navbar__link-icon.active::after {
+.js-btn-subNav .navbar__item-text.active::after {
     transform: rotate(90deg);
 }
 
@@ -455,6 +457,7 @@
 }
 
 .navbar-sub__item {
+    overflow: hidden;
     margin: 16px 29px 0 29px;
 }
 
@@ -462,6 +465,7 @@
     text-decoration: none;
     color: var(--text-color);
     display: block;
+    overflow: hidden;
     position: relative;
 }
 
@@ -485,6 +489,8 @@
     margin: 70px 0 0 250px;
     padding-bottom: 16px;
     background-color: #f2f2f7;
+    z-index: 1;
+    transition: margin .2s ease;
 }
 
 .content-main.login--success .content {

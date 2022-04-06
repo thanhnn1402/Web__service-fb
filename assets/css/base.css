@@ -39,10 +39,6 @@ html {
     margin: 0 auto;
 }
 
-.grid-full {
-    width: 100%;
-}
-
 .text-color-success {
     color: var(--success-color);
 }
@@ -357,8 +353,14 @@ html {
     padding-right: 12px;
 }
 
+.col-2 {
+    width: 16.6667%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
 .col-3 {
-    width: 24.99999%;
+    width: 24.9999%;
     padding-left: 12px;
     padding-right: 12px;
 }
@@ -371,6 +373,12 @@ html {
 
 .col-9 {
     width: 74.9999%;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.col-10 {
+    width: 83.3333%;
     padding-left: 12px;
     padding-right: 12px;
 }
