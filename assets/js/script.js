@@ -1,5 +1,10 @@
-const btnNavs = document.querySelectorAll('.js-btn-subNav');
-const subNavs = document.querySelectorAll('.navbar-sub');
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
+
+
+// sự kiện click menu navbar
+const btnNavs = $$('.js-btn-subNav');
+const subNavs = $$('.navbar-sub');
 for (var i = 0; i < btnNavs.length; i++) {
     btnNavs[i].addEventListener('click', function() {
         for (var j = 0; j < subNavs.length; j++) {
@@ -23,14 +28,17 @@ for (var i = 0; i < btnNavs.length; i++) {
     })
 }
 
-var btnCloseMenu = document.querySelector('.topbar-left__btn');
-const Navbar = document.querySelector('.navbar');
-const NavbarTitle = document.querySelectorAll('.navbar__title');
-const header = document.querySelector('.header');
-const ContentMain = document.querySelector('.content-main');
+
+// thu gọn menu
+const btnCloseMenu = $('.topbar-left__btn');
+const Navbar = $('.navbar');
+const NavbarTitle = $$('.navbar__title');
+const header = $('.header');
+const ContentMain = $('.content-main');
+const btnNavContents = $$('.navbar__item-text');
 var a = [];
-btnCloseMenu.addEventListener('click', function(e) {
-    var btnNavContents = document.querySelectorAll('.navbar__item-text');
+
+function collapseMenu() {
     if (Navbar.className == 'navbar show') {
         btnNavContents.forEach(function(btnNavContent) {
             btnNavContent.style.display = 'none';
@@ -59,11 +67,20 @@ btnCloseMenu.addEventListener('click', function(e) {
             value.textContent = a[index];
         }
     })
+}
+
+btnCloseMenu.addEventListener('click', function() {
+    collapseMenu();
 })
 
-// show service 
-var btnTopbar = document.querySelectorAll('.topbar-right__item');
-var service = document.querySelector('.topbar-right-service');
+
+if (screen.width <= 1024) {
+    collapseMenu();
+}
+
+// hiển thị dịch vị khác trên thanh top-bar
+const btnTopbar = $$('.topbar-right__item');
+const service = $('.topbar-right-service');
 
 
 btnTopbar[0].addEventListener('click', function() {
@@ -71,11 +88,11 @@ btnTopbar[0].addEventListener('click', function() {
 })
 
 
-//
-var btnNotifys = document.querySelectorAll('.topbar-right-notify__category-name');
-var notify = document.querySelector('.topbar-right-notify');
-var notifyHistory = document.querySelector('.topbar-right-notify__history');
-var notifyAdmin = document.querySelector('.topbar-right-notify__admin');
+// hiển thị thông báo trên thanh top'-bar
+const btnNotifys = $$('.topbar-right-notify__category-name');
+const notify = $('.topbar-right-notify');
+const notifyHistory = $('.topbar-right-notify__history');
+const notifyAdmin = $('.topbar-right-notify__admin');
 
 notify.addEventListener('click', function(event) {
     event.stopPropagation();
@@ -102,34 +119,38 @@ btnNotifys.forEach(function(btnNotify, index) {
 })
 
 
-// 
-var tabs = document.querySelectorAll('.tabs');
-var panes = document.querySelectorAll('.tab-pane');
+// click tabs
+const tabs = $$('.tabs');
+const panes = $$('.tab-pane');
 
 tabs.forEach(function(tab, index) {
     var pane = panes[index];
 
     tab.onclick = function() {
-        document.querySelector('.tabs.active').classList.remove('active');
-        document.querySelector('.tab-pane.active').classList.remove('active');
+        $('.tabs.active').classList.remove('active');
+        $('.tab-pane.active').classList.remove('active');
 
         this.classList.add('active');
         pane.classList.add('active');
     }
 })
 
-var feels = document.querySelectorAll('.feel');
+
+// chọn cảm xúc
+const feels = $$('.feel');
 
 feels.forEach(function(feel) {
     feel.addEventListener('click', function() {
-        document.querySelector('.feel.active').classList.remove('active');
+        $('.feel.active').classList.remove('active');
 
         this.classList.add('active');
     })
 })
 
-var toast = document.querySelector('.toast');
-var btnClose = document.querySelector('.toast__btn-close');
+
+// tắt thông báo đăng nhập
+var toast = $('.toast');
+var btnClose = $('.toast__btn-close');
 
 btnClose.onclick = function() {
     toast.style.display = 'none';
