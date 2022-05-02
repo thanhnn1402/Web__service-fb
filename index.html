@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/sytle.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/fontawesome-free-6.0.0-web/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Great+Vibes&family=Qwitcher+Grypen:wght@400;700&family=Roboto+Condensed:wght@300;400;700&family=Waterfall&display=swap" rel="stylesheet">
     <title>Trang chủ</title>
@@ -14,9 +15,9 @@
 
 <body>
     <div class="main">
-        <div class="navbar show">
+        <div class="navbar">
             <img src="" alt="" class="navbar-logo">
-            <ul class="navbar__list">
+            <ul class="navbar__list show">
                 <li class="navbar__item">
                     <a href="./index.html" class="navbar__link">
                         <i class="navbar-icon fa-solid fa-house-chimney"></i>
@@ -348,6 +349,18 @@
                 </div>
                 <div class="topbar-right">
                     <ul class="topbar-right__list">
+                        <li class="topbar-right__item">
+                            <a href="#" class="topbar-right__link"><i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                            <div class="form-search--mobile">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Search...">
+                                        <a href="" class="btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
                         <li class="topbar-right__item">
                             <a href="#" class="topbar-right__link">
                                 <img src="https://img.icons8.com/cotton/64/000000/blockchain-technology--v4.png" />
@@ -718,7 +731,7 @@
 
                 <div class="content-body grid-full">
                     <div class="row">
-                        <div class="col col-3">
+                        <div class="col col-3 col-tb-6 col-mb-12">
                             <div class="card card--animate p-3 ">
                                 <p class="card-title">TỔNG NẠP</p>
                                 <div class="card-body d-flex align-items-center justify-between">
@@ -732,7 +745,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col col-3">
+                        <div class="col col-3 col-tb-6 col-mb-12">
                             <div class="card card--animate p-3 ">
                                 <p class="card-title">ĐÃ TIÊU</p>
                                 <div class="card-body d-flex align-items-center justify-between">
@@ -747,7 +760,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3 col-tb-6 col-mb-12">
                             <div class="card card--animate p-3 ">
                                 <p class="card-title">TIỀN CÒN LẠI</p>
                                 <div class="card-body d-flex align-items-center justify-between">
@@ -762,7 +775,7 @@
                             </div>
                         </div>
 
-                        <div class="col col-3">
+                        <div class="col col-3 col-tb-6 col-mb-12">
                             <div class="card card--animate p-3 ">
                                 <p class="card-title">ĐANG CHẠY</p>
                                 <div class="card-body d-flex align-items-center justify-between">
@@ -779,7 +792,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-6 col-tb-12 col-mb-12">
                             <div class="card">
                                 <div class="card__header">
                                     <p class="card__header-title">Nạp thẻ cào gần đây</p>
@@ -791,7 +804,7 @@
                             </div>
                         </div>
 
-                        <div class="col-6">
+                        <div class="col-6 col-tb-12 col-mb-12">
                             <div class="card">
                                 <div class="card__header">
                                     <p class="card__header-title">Nạp auto bank gần đây</p>
@@ -849,31 +862,22 @@
                                                 </tr>
 
 
-                                                <tr class="dataTable__content dataTable__content--not-empty">
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                    <td></td>
-                                                </tr>
+                                                <!-- <tr class="dataTable__content dataTable__content--not-empty">
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                    <td class="dataTable__content-item"></td>
+                                                </tr> -->
 
 
                                                 <tr class="dataTable__content dataTable__content--empty">
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
-                                                    <td class="dataTable__content-item"></td>
+                                                    <td colspan="11">No data available in table</td colspan="11">
                                                 </tr>
                                             </table>
                                         </div>

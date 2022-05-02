@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <title>Đăng ký</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="content-left">
+                <div class="content-left__heading">
+                    <h4 class="content-left__title">Welcome!</h4>
+                    <span class="content-left__des">Đăng ký thành viên mới!</span>
+                </div>
+                <form action="" class="form" id="form-1">
+                    <label class="form-control" for="account">
+                        <span >Tài khoản</span>
+                        <input type="text" name="account" id="account">
+                        <span class="form-message"></span>
+                    </label>
+                    <label class="form-control" for="email">
+                        <span>Email</span>
+                        <input type="text" name="email" id="email">
+                        <span class="form-message"></span>
+                    </label>
+                    <label class="form-control" for="password">
+                        <span>Mật khẩu</span>
+                        <input type="password" name="password" id="password">
+                        <span class="form-message"></span>
+                    </label>
+                    <label class="form-control" for="password-confirmation">
+                        <span>Nhập lại mật khẩu</span>
+                        <input type="password" name="password-confirmation" id="password-confirmation">
+                        <span class="form-message"></span>
+                    </label>
+                    <div class="form-control__select">
+                        <div class="form-control__check">
+                            <input type="checkbox" name="check" id="check">
+                            <label for="check">Remember me</label>
+                        </div>
+
+                        <div class="form-control__forgotpassword">
+                            <a href="" class="forgot-password"> Quên mật khẩu?</a>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Đăng ký" name="login">
+
+                    <p class="text-seperate">Nếu bạn chưa có tài khoản</p>
+
+                    <a href="./login.html" class="btn btn--warning">Đăng nhập</a>
+                </form>
+            </div>
+            <div class="content-right">
+                <!-- <div class="content-right__nav">
+                    <a href="./index.html" class="content-right__nav-link">Trang chủ</a>
+                    <a href="./naptien.html" class="content-right__nav-link">Nạp tiền</a>
+                    <a href="./mowebsite.html" class="content-right__nav-link">Mở website</a>
+                    <a href="" class="content-right__nav-link">Liên hệ admin</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/valida..js"></script>
+    <script>
+        validator({
+            form: '#form-1',
+            errorSelector: '.form-message',
+            rules: [
+                validator.isRequired('#account'),
+                validator.isRequired('#email'),
+                validator.isEmail('#email'),
+                validator.minLength('#password', 6),
+                validator.isRequired('#password_confirmation'),
+                validator.isConfirmed('#password_confirmation', function() {
+                    return document.querySelector('#form-1 #password')
+                }, 'Mật khẩu nhập lại không đúng'),
+            ]
+        })
+    </script>
+</body>
+
+</html>

@@ -27,11 +27,77 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
+.btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    display: inline-block;
+    transition: all .2s linear;
+}
+
+.btn i {
+    margin-right: 6px;
+}
+
+.btn--login:hover,
+.btn.btn--success:hover {
+    background-color: #3bad71;
+}
+
+.btn--register:hover {
+    background-color: #403098;
+}
+
+.btn--login {
+    background-color: #45cb85;
+    border-radius: 999px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.btn--register {
+    border-radius: 999px;
+    background-color: #4b38b3;
+    color: #fff;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.btn--login i,
+.btn--register i {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+.btn.btn--success {
+    background-color: #45cb85;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.btn.btn--info {
+    background-color: var(--info-color);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.btn.btn--warning {
+    background-color: var(--warning-color);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.btn.btn--danger {
+    background-color: var(--danger-color);
+    color: #fff;
+    border-radius: 4px;
+}
+
 .seperate {
     display: block;
     width: 100%;
     height: 0.5px;
-    background-color: #adafb9;
+    background-color: #e1e2e3;
 }
 
 .grid {
