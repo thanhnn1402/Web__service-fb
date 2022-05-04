@@ -6,7 +6,7 @@
     margin-left: 250px;
     display: block;
     height: 70px;
-    background-color: #fff;
+    background-color: #1c1c36;
     transition: margin 0.2s ease;
     border-bottom: 0.5px solid #e1e2e3;
     z-index: 999;
@@ -79,21 +79,16 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    transition: all .2s linear;
+    transition: all .2s ease;
 }
 
-.topbar-right__link img {
-    width: 18px;
-    height: 18px;
-    transition: all .2s linear;
+.topbar-right__link i {
+    font-size: 18px;
 }
 
 .topbar-right__link:hover {
-    background-color: rgba(53, 119, 241, .1);
-}
-
-.topbar-right__link:hover img {
-    transform: scale(1.1);
+    background-color: #ffffff12;
+    color: #fff;
 }
 
 .topbar-right__login {
@@ -132,6 +127,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 16px;
+    border-bottom: 1px dotted #d3d5de;
 }
 
 .topbar-right-service__title {
@@ -184,6 +180,7 @@
 }
 
 .topbar-right-service___name {
+    margin-top: 8px;
     font-size: 13px;
     color: #212529;
     text-align: center;
@@ -496,7 +493,7 @@
     transition: margin .2s ease;
 }
 
-.content-main.login--success .content {
+.content {
     height: 100vh;
     margin: 0;
     background-color: #f2f2f7;
@@ -511,7 +508,9 @@
     border-color: #262a2f;
 }
 
-.content.bg-dark-300 .tabs {}
+.content.bg-dark-300 .tabs {
+    color: #ced4da;
+}
 
 .heading {
     display: flex;

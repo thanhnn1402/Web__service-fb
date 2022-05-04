@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/sytle.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/font/RemixIcon_Fonts_v2.5.0/fonts/remixicon.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/fontawesome-free-6.0.0-web/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/mowebsite.css">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Great+Vibes&family=Qwitcher+Grypen:wght@400;700&family=Roboto+Condensed:wght@300;400;700&family=Waterfall&display=swap" rel="stylesheet">
@@ -351,8 +353,20 @@
                 <div class="topbar-right">
                     <ul class="topbar-right__list">
                         <li class="topbar-right__item">
+                            <a href="#" class="topbar-right__link"><i class="fa-solid fa-magnifying-glass"></i>
+                            </a>
+                            <div class="form-search--mobile">
+                                <form>
+                                    <div class="input-group">
+                                        <input type="text" placeholder="Search...">
+                                        <a href="" class="btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+                        <li class="topbar-right__item">
                             <a href="#" class="topbar-right__link">
-                                <img src="https://img.icons8.com/cotton/64/000000/blockchain-technology--v4.png" />
+                                <i class="ri-apps-line"></i>
                             </a>
                             <div class="topbar-right-service">
                                 <div class="topbar-right-service__heading">
@@ -363,37 +377,37 @@
                                     <div class="row">
                                         <div class="col-3">
                                             <a href="" class="topbar-right-service__link">
-                                                <img src="" alt="" class="topbar-right-service__img">
+                                                <img src="./assets/img/service/169850.png" alt="" class="topbar-right-service__img">
                                                 <span class="topbar-right-service___name">Api Bank</span>
                                             </a>
                                         </div>
                                         <div class="col-3">
                                             <a href="" class="topbar-right-service__link">
-                                                <img src="" alt="" class="topbar-right-service__img">
+                                                <img src="./assets/img/service/1077147.png" alt="" class="topbar-right-service__img">
                                                 <span class="topbar-right-service___name">Took hack</span>
                                             </a>
                                         </div>
                                         <div class="col-3">
                                             <a href="" class="topbar-right-service__link">
-                                                <img src="" alt="" class="topbar-right-service__img">
+                                                <img src="./assets/img/service/images.jpg" alt="" class="topbar-right-service__img">
                                                 <span class="topbar-right-service___name">Pr game</span>
                                             </a>
                                         </div>
                                         <div class="col-3">
                                             <a href="" class="topbar-right-service__link">
-                                                <img src="" alt="" class="topbar-right-service__img">
+                                                <img src="./assets/img/service/logo1.png" alt="" class="topbar-right-service__img">
                                                 <span class="topbar-right-service___name">Đổi thẻ</span>
                                             </a>
                                         </div>
                                         <div class="col-3">
                                             <a href="" class="topbar-right-service__link">
-                                                <img src="" alt="" class="topbar-right-service__img">
+                                                <img src="./assets/img/service/download.png" alt="" class="topbar-right-service__img">
                                                 <span class="topbar-right-service___name">Mail chimp</span>
                                             </a>
                                         </div>
                                         <div class="col-3">
                                             <a href="" class="topbar-right-service__link">
-                                                <img src="" alt="" class="topbar-right-service__img">
+                                                <img src="./assets/img/service/download (1).png" alt="" class="topbar-right-service__img">
                                                 <span class="topbar-right-service___name">Slack</span>
                                             </a>
                                         </div>
@@ -402,14 +416,14 @@
                             </div>
                         </li>
                         <li class="topbar-right__item">
-                            <a href="#" class="topbar-right__link"><img src="https://img.icons8.com/ios-glyphs/16/000000/full-screen--v1.png" /></i>
+                            <a href="#" class="topbar-right__link"><i class="ri-fullscreen-fill"></i>
                             </a>
                         </li>
                         <li class="topbar-right__item">
-                            <a href="#" class="topbar-right__link"><img src="https://img.icons8.com/external-others-anggara-putra/16/000000/external-social-social-media-basic-others-anggara-putra-29.png" /></a>
+                            <a href="#" class="topbar-right__link"><i class="ri-moon-line"></i></a>
                         </li>
                         <li class="topbar-right__item">
-                            <a href="#" class="topbar-right__link"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/000000/external-bell-christmas-dreamstale-lineal-dreamstale.png" /></a>
+                            <a href="#" class="topbar-right__link"><i class="fa-regular fa-bell"></i></a>
                             <div class="topbar-right-notify">
                                 <div class="topbar-right-notify__heading">
                                     <h4>Thông Báo</h4>
@@ -467,7 +481,7 @@
                         </li>
                         <li class="topbar-right__item topbar-right__login ">
                             <i class="login-icon fa-solid fa-right-from-bracket"></i>
-                            <a href="" class="topbar-right__login-btn">
+                            <a href="./login.html" class="topbar-right__login-btn">
                                             Đăng nhập</a>
                         </li>
                     </ul>
@@ -485,39 +499,41 @@
                     <li class="breadcrumb">Tạo web site riêng</li>
                 </ul>
             </div>
-            <div class="grid-full">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card mx-4">
-                            <div class="card__body">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <p class="text-center p-3 bg-green-100 text-color-success rounded-1 lh-base">
-                                            TRỎ DOMAIN VỀ NS DƯỚI ĐÂY SAU ĐÓ LIÊN HỆ ADMIN ĐỂ KÍCH HOẠT WEBSITE<br> ADMIN CÓ THỂ THU PHÍ HOSTING ĐỂ TRÁNH SPAM<br> BẠN CÓ THỂ THUÊ ADMIN THUÊ TÊN MIỀN CHO BẠN KINH DOANH<br> ĐIỀU KIỆN ĐỂ MỞ WEBSITE YÊU CẦU
-                                            BẠN PHẢI THUÊ AUTO NẠP TIỀN TẠI APIGIARE.COM
-                                        </p>
+            <div class="content">
+                <div class="grid-full">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card mx-4">
+                                <div class="card__body">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <p class="text-center p-3 bg-green-100 text-color-success rounded-1 lh-base">
+                                                TRỎ DOMAIN VỀ NS DƯỚI ĐÂY SAU ĐÓ LIÊN HỆ ADMIN ĐỂ KÍCH HOẠT WEBSITE<br> ADMIN CÓ THỂ THU PHÍ HOSTING ĐỂ TRÁNH SPAM<br> BẠN CÓ THỂ THUÊ ADMIN THUÊ TÊN MIỀN CHO BẠN KINH DOANH<br> ĐIỀU KIỆN ĐỂ MỞ WEBSITE YÊU
+                                                CẦU BẠN PHẢI THUÊ AUTO NẠP TIỀN TẠI APIGIARE.COM
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mt-3 align-items-center">
-                                    <div class="col-3"><label for="NS1">NS1</label></div>
-                                    <div class="col-9">
-                                        <input type="text" value="beau.ns.cloudflare.com" id="NS1" name="NS1">
+                                    <div class="row mt-3 align-items-center">
+                                        <div class="col-3"><label for="NS1">NS1</label></div>
+                                        <div class="col-9">
+                                            <input type="text" value="beau.ns.cloudflare.com" id="NS1" name="NS1">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row align-items-center">
-                                    <div class="col-3"><label for="NS2">NS2</label></div>
-                                    <div class="col-9">
-                                        <input type="text" value="pam.ns.cloudflare.com" id="NS2" name="NS2">
+                                    <div class="row align-items-center">
+                                        <div class="col-3"><label for="NS2">NS2</label></div>
+                                        <div class="col-9">
+                                            <input type="text" value="pam.ns.cloudflare.com" id="NS2" name="NS2">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="card mt-4 mx-4">
-                            <div class="row p-3">
-                                <div class="col-12">
-                                    <p class="api-web mb-4 fs-5 fw-bold text-color-gray-400">API CỦA BẠN ĐỂ KÍCH HOẠT WEB MỚI</p>
-                                    <p class="api-web text-color-primary fs-6 fw-bold">LXFORqE9BJ4WIirkZSbHnpo8l </p>
+                            <div class="card mt-4 mx-4">
+                                <div class="row p-3">
+                                    <div class="col-12">
+                                        <p class="api-web mb-4 fs-5 fw-bold text-color-gray-400">API CỦA BẠN ĐỂ KÍCH HOẠT WEB MỚI</p>
+                                        <p class="api-web text-color-primary fs-6 fw-bold">LXFORqE9BJ4WIirkZSbHnpo8l </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

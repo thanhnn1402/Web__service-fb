@@ -143,19 +143,19 @@ btnTopbar.forEach(function(btn) {
 
 })
 
-// btnTopbar[0].onclick = function(e) {
-//     searchMobile.classList.toggle('show');
-//     e.stopPropagation();
-// }
+btnTopbar[0].onclick = function(e) {
+    searchMobile.classList.toggle('show');
+    e.stopPropagation();
+}
 
 searchMobile.addEventListener('click', function(e) {
     e.stopPropagation();
 })
 
-// btnTopbar[1].addEventListener('click', function(e) {
-//     service.classList.toggle('show');
-//     e.stopPropagation();
-// })
+btnTopbar[1].addEventListener('click', function(e) {
+    service.classList.toggle('show');
+    e.stopPropagation();
+})
 
 service.addEventListener('click', function(event) {
     event.stopPropagation();
@@ -179,10 +179,10 @@ notify.addEventListener('click', function(event) {
     event.stopPropagation();
 })
 
-// btnTopbar[4].onclick = function(e) {
-//     notify.classList.toggle('show');
-//     e.stopPropagation();
-// }
+btnTopbar[4].onclick = function(e) {
+    notify.classList.toggle('show');
+    e.stopPropagation();
+}
 
 btnNotifys.forEach(function(btnNotify, index) {
     btnNotify.onclick = function() {
@@ -215,6 +215,13 @@ function openFullscreen() {
 
 
 btnTopbar[3].addEventListener('click', function() {
+
+    if (btnTopbar[3].querySelector('i').className == 'ri-moon-line') {
+        btnTopbar[3].querySelector('i').className = 'ri-sun-line';
+    } else {
+        btnTopbar[3].querySelector('i').className = 'ri-moon-line';
+    }
+
     Navbar.classList.toggle('bg-dark-100');
     header.classList.toggle('bg-dark-200');
     heading.classList.toggle('bg-dark-100');
